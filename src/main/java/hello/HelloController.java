@@ -16,12 +16,13 @@ public class HelloController {
     public String index() {
     	JSONObject obj = new JSONObject();
     	String text = "hola";
-    	long chat_id=115591033;
-    	text= text+Emoji.CRYING_CAT_FACE;
-    	obj.put("chat_id", chat_id);
+    	long chat_idXaryz=384201275;
+    	long chat_idHector=115591033;
+    	text= text+Emoji.SMILING_FACE_WITH_HEART_SHAPED_EYES;
+    	obj.put("chat_id", chat_idHector);
     	obj.put("text", text);   	
     	String resp=restClientSendMessage.peticion(obj.toString(), "POST");
-    	logger.info("\n-------------------Message to----------------------\n"+" ->Chat_ID:"+chat_id+"\n ->Bot Message: "+text );
+    	logger.info("\n-------------------Message to----------------------\n"+" ->Chat_ID:"+chat_idHector+"\n ->Bot Message: "+text );
     	
     	logger.info("\n-------------------Bot father----------------------\n"+resp);
         return "Greetings from Spring Boot!";
